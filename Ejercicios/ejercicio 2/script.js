@@ -56,5 +56,5 @@ for (key in Pizza) {
 }
 
 for (key in Pizza) {
-    console.log(`La pizza: ${(Pizza[key].nombre)} vale: ${(Pizza[key].precio)}`);
+    console.log(`La pizza de ${(Pizza[key].nombre)} vale: ${(Pizza[key].precio)}`);
 }

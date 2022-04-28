@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+.main-container {
+  font-family: 'Roboto', sans-serif;
+  width: 98vw;
+  border: double 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-container .ingreso-container {
+  width: 30%;
+  border-right: solid 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-container .resumen-container {
+  width: 70%;
+}
+
+.menu-opciones {
+  width: 45%;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+.menu-opciones option {
+  text-align: center;
+}
+
+.descripcion, .monto {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 5%;
+}
+
+#btn-aceptar {
+  width: 40%;
+  height: 40px;
+  margin: 10% auto;
+}
+
+.cabecera {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: solid 1px;
+  margin: 2% auto;
+  padding-right: 2%;
+  padding-left: 2%;
+}
+
+.total {
+  width: 94%;
+  border: solid 1px;
+  margin: auto;
+}
+/*# sourceMappingURL=index.css.map */

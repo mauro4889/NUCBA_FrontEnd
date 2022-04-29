@@ -1,14 +1,40 @@
-const descripcion = document.getElementById('description');
-const monto = document.getElementById('monto');
-const selection = document.getElementById("menu");
+const descripcion = document.getElementById('descripcion');
+const importe = document.getElementById('importe');
+const tipo = document.getElementById("menu");
 const aceptar = document.getElementById('btn-aceptar');
-const mostar = document.getElementsByClassName('muestra')
+const tdDescripcion = document.getElementById('td-descripcion');
+const tdTipo = document.getElementById('td-tipo');
+const tdImporte = document.getElementById('td-importe');
+const importeTotal = document.getElementById('td-total');
+let total;
+
 
 aceptar.addEventListener('click', () => {
-    let contenido_selection = document.createTextNode(selection.value);
-    let contenido_descriptcion = document.createTextNode(descripcion.innerText);
-    let contenido_monto = document.createTextNode(monto.innerText);
-    mostar.appendChild(contenido_selection);
-    mostar.appendChild(contenido_descriptcion);
-    mostar.appendChild(contenido_monto);
+    if (tipo.value == 'ingreso' || tipo.value == 'egreso') {
+        const nuevoTdDescripcion = document.createElement('td');
+        const nuevoTdTipo = document.createElement('td');
+        const nuevoTdImporte = document.createElement('td');
+        const textDescripcion = document.createTextNode(descripcion.value)
+        const textTipo = document.createTextNode(tipo.value)
+        const textImporte = document.createTextNode(importe.value)
+        nuevoTdDescripcion.appendChild(textDescripcion)
+        nuevoTdTipo.appendChild(textTipo);
+        nuevoTdImporte.appendChild(textImporte);
+        tdDescripcion.appendChild(nuevoTdDescripcion);
+        tdTipo.appendChild(nuevoTdTipo);
+        tdImporte.appendChild(nuevoTdImporte);
+        if (tipo.value == 'ingreso') {
+            tdDescripcion.classList.add('fondo-ingreso')
+            tdTipo.classList.add('fondo-ingreso')
+            tdImporte.classList.add('fondo-ingreso')
+            total += Number(importe.value);
+            importeTotal.innerText = `$${total}`;
+        } else {
+            tdDescripcion.classList.add('fondo-egreso')
+            tdTipo.classList.add('fondo-egreso')
+            tdImporte.classList.add('fondo-egreso')
+            total -= Number(importe.value);
+            importeTotal.innerText = `$${total}`;
+        }
+    }
 })

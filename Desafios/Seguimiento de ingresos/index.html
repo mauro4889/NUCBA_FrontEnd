@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,10 @@
     <link rel="stylesheet" href="./assets/index.css">
     <title>Seguimiento de ingresos</title>
 </head>
+
 <body>
     <div class="main-container">
-        <div class="ingreso-container">            
+        <div class="ingreso-container">
             <select name="select" class="menu-opciones" id="menu">
                 <option value="ingreso" selected>Ingreso</option>
                 <option value="egreso">Egreso</option>
@@ -20,25 +22,36 @@
             </div>
             <div class="monto">
                 <p>Ingrese monto</p>
-                <input type="text" id="monto">
-            </div>            
+                <input type="number" id="importe">
+            </div>
             <input type="button" value="Aceptar" id="btn-aceptar">
         </div>
         <div class="resumen-container">
-            <div class="cabecera">
-                <p>Descripcion</p>
-                <p>Tipo</p>
-                <p>Importe</p>
-            </div>
-            <div class="muestra">
-            </div>
-            <div class="total">
-                <p></p>
-            </div>
+            <table class="tabla">
+                <tr>
+                    <th>Descripción</th>
+                    <th>Tipo</th>
+                    <th>Importe</th>
+                </tr>
+                <tr>
+                    <td id="td-descripcion"></td>
+                    <td id="td-tipo"></td>
+                    <td id="td-importe"></td>
+                </tr>
+                <tr>
+                    <td>
+                        TOTAL
+                    </td>
+                    <td id="td-total">
+
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
 
 
     <script src="./script.js"></script>
 </body>
+
 </html>

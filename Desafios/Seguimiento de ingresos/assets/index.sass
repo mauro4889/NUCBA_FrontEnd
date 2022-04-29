@@ -36,16 +36,37 @@
     height: 40px
     margin: 10% auto
 
-.cabecera
+.tabla
     width: 90%
+    tr
+        width: 90%
+        display: flex
+        justify-content: space-between
+        border: solid 1px
+        margin: 2% auto
+        padding:
+            right: 2%
+            left: 2%
+
+#td-descripcion, #td-tipo, #td-importe
+    width: 30%
     display: flex
-    justify-content: space-between
-    border: solid 1px
-    margin: 2% auto
-    padding:
-        right: 2%
-        left: 2%
+    flex-direction: column
+    justify-content: space-around
+
+#td-tipo
+    text-align: center
+
+#td-importe
+    text-align: right
+
 .total
     width: 94%
     border: solid 1px
     margin: auto
+
+.fondo-ingreso
+    background-color: green
+
+.fondo-egreso
+    background-color: red

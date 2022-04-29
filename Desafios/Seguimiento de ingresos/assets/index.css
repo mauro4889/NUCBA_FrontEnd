@@ -110,4 +110,19 @@
 .fondo-egreso {
   background-color: red;
 }
+
+#row {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#row td {
+  width: 30%;
+}
 /*# sourceMappingURL=index.css.map */

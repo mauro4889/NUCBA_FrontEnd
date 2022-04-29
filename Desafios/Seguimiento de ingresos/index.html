@@ -28,24 +28,27 @@
         </div>
         <div class="resumen-container">
             <table class="tabla">
-                <tr>
-                    <th>Descripción</th>
-                    <th>Tipo</th>
-                    <th>Importe</th>
-                </tr>
-                <tr>
-                    <td id="td-descripcion"></td>
-                    <td id="td-tipo"></td>
-                    <td id="td-importe"></td>
-                </tr>
-                <tr>
-                    <td>
-                        TOTAL
-                    </td>
-                    <td id="td-total">
-
-                    </td>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                        <th>Importe</th>
+                    </tr>
+                </thead>               
+                <tbody>
+                    <tr id="row">
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>
+                            TOTAL
+                        </td>
+                        <td id="td-total">
+    
+                        </td>
+                    </tr>
+                </tfoot>                
             </table>
         </div>
     </div>
